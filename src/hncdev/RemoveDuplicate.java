@@ -1,7 +1,9 @@
 package hncdev;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class RemoveDuplicate {
 
@@ -10,23 +12,15 @@ public class RemoveDuplicate {
      */
 
     public String removeDuplicates(String str) {
-        char ch[] = str.toCharArray();
-
-        StringBuilder sb = new StringBuilder();
-        Set<Character> chHashSet = new HashSet<>();
-
-        for (char c : ch) {
-            if (chHashSet.add(c)) {
-                sb.append(c);
-            }
-        }
-
-        return sb.toString();
+        return Arrays.asList(str.split(""))
+                .stream()
+                .distinct()
+                .collect(Collectors.joining());
     }
 
     public static void main(String[] args) {
         RemoveDuplicate rd = new RemoveDuplicate();
-        String str = "hanci";
+        String str = "hello";
         System.out.println(rd.removeDuplicates(str));
     }
 }
