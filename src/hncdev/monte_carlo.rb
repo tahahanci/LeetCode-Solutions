@@ -1,13 +1,15 @@
-total_points = gets.chomp
-inside_circle = 0
+# Constants
+TOTAL_POINTS = 1000000
 
-total_points.to_i.times do
-	x = rand
-	y = rand
-	if x**2 + y**2 <= 1
-		inside_circle += 1
-	end
+def estimate_pi(total_points)
+  points_inside_circle = 0
+  total_points.times do
+    x = rand
+    y = rand
+    points_inside_circle += 1 if x**2 + y**2 <= 1
+  end
+  4 * points_inside_circle.to_f / total_points
 end
 
-pi = 4.0 * inside_circle / total_points.to_i
-puts "Here is your PI estimation: #{pi}"
+pi_estimate = estimate_pi(TOTAL_POINTS)
+puts "Estimated value of pi: #{pi_estimate}"
