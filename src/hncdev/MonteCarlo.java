@@ -16,7 +16,8 @@ public class MonteCarlo {
     }
 
     public static void main(String[] args) {
-        double PI = MonteCarlo.estimatePi(100000000);
+        int totalPoints = 1000000;
+        double PI = MonteCarlo.estimatePi(totalPoints);
         System.out.println("Here yours PI estimation: " + PI);
         System.out.println("Real PI: " + Math.PI);
     }
