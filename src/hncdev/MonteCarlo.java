@@ -4,7 +4,7 @@ public class MonteCarlo {
 
     public static double estimatePi(int totalPoints) {
         double insidePoints = 0;
-        for (int i = 0; i <= totalPoints; i++) {
+        for (int i = 0; i < totalPoints; i++) {
             double x = Math.random();
             double y = Math.random();
 
