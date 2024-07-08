@@ -3,7 +3,7 @@ package hncdev;
 public class MonteCarlo {
 
     public static double estimatePi(int totalPoints) {
-        double insidePoints = 0;
+        int insidePoints = 0;
         for (int i = 0; i < totalPoints; i++) {
             double x = Math.random();
             double y = Math.random();
@@ -12,7 +12,7 @@ public class MonteCarlo {
                 insidePoints++;
             }
         }
-        return 4 * (insidePoints / (double) totalPoints);
+        return 4 * ((double) insidePoints / (double) totalPoints);
     }
 
     public static void main(String[] args) {
