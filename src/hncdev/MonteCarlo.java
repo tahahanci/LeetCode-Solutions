@@ -1,5 +1,7 @@
 package hncdev;
 
+import java.util.Scanner;
+
 public class MonteCarlo {
 
     public static double estimatePi(int totalPoints) {
@@ -16,8 +18,12 @@ public class MonteCarlo {
     }
 
     public static void main(String[] args) {
-        int totalPoints = 1000000;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Give the total points for estimating PI: ");
+        int totalPoints = input.nextInt();
         double PI = MonteCarlo.estimatePi(totalPoints);
+
         System.out.println("Here yours PI estimation: " + PI);
         System.out.println("Real PI: " + Math.PI);
     }
