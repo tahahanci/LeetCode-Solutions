@@ -32,4 +32,13 @@ public class PrimeNumber {
         }
     }
 
+    public static void main(String[] args) {
+        PrimeNumber number = new PrimeNumber();
+        List<Integer> primeDivisors = number.findPrimeDivisors(856);
+
+        for (int i : primeDivisors) {
+            System.out.print(i + " ");
+        }
+    }
+
 }
