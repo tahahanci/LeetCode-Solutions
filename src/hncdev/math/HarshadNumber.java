@@ -19,7 +19,7 @@ public class HarshadNumber {
 
     public static void main(String[] args) {
         HarshadNumber harshadNumber = new HarshadNumber();
-        int myNumber = harshadNumber.sumDigitsOfHarshadNumber(23);
+        int myNumber = harshadNumber.sumDigitsOfHarshadNumber(21);
         System.out.println(myNumber);
     }
 }
